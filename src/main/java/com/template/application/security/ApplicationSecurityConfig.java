@@ -15,12 +15,11 @@ public class ApplicationSecurityConfig{
     private ApplicationAuthenticationProvider applicationAuthenticationProvider;
 
     @Bean
-    public SecurityFilterChain config(HttpSecurity http){
+    public WebSecurityCustomizer config(){
 
-        http.authenticationManager();
+        return (web) -> web.ignoring().antMatchers("/public/**");
+
         
-
-        return http.build();
     }
 
 
