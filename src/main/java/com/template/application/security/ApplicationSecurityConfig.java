@@ -11,8 +11,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class ApplicationSecurityConfig{
 
-    @Autowired
-    private ApplicationAuthenticationProvider applicationAuthenticationProvider;
+   
 
     @Bean
     public WebSecurityCustomizer config(){
